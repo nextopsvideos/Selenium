@@ -12,6 +12,7 @@ using System.Data;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using System.Web.Hosting;
 
 namespace PartsUnlimited.Script
 {
@@ -35,10 +36,10 @@ namespace PartsUnlimited.Script
         {
             NavigateToHomePage(browserName);
 
-            DataTable rCnt = Excel_Library.GetNumberOfRows(@".\Excel_Files\Login_Credentials.xlsx", "Sheet1");
+            //DataTable rCnt = Excel_Library.GetNumberOfRows(HostingEnvironment.MapPath(@".\Login_Credentials.xlsx", "Sheet1"));
 
-            string email = Convert.ToString(rCnt.Rows[0]["Email"]);
-            string password = Convert.ToString(rCnt.Rows[0]["Password"]);
+            string email = "Administrator@test.com";//Convert.ToString(rCnt.Rows[0]["Email"]);
+            string password = "YouShouldChangeThisPassword1!";//Convert.ToString(rCnt.Rows[0]["Password"]);
             
             //wait
             Base_Class.Wait();
@@ -86,10 +87,11 @@ namespace PartsUnlimited.Script
         {
             NavigateToHomePage(browserName);
 
-            DataTable rCnt = Excel_Library.GetNumberOfRows(@"C:\Users\Karthee\Desktop\Login_Credentials.xlsx", "Sheet1");
+            // DataTable rCnt = Excel_Library.GetNumberOfRows(@"C:\Users\sriramdasbalaji\Source\Repos\Selenium\test\PartsUnlimited.SeleniumTests\Excel_Files\Login_Credentials.xlsx", "Sheet1");
 
-            string email = Convert.ToString(rCnt.Rows[0]["Email"]);
-            string password = Convert.ToString(rCnt.Rows[0]["Password"]);
+            string email = "Administrator@test.com";//Convert.ToString(rCnt.Rows[0]["Email"]);
+            string password = "YouShouldChangeThisPassword1!";//Convert.ToString(rCnt.Rows[0]["Password"]);
+
 
             //wait
             Base_Class.Wait();

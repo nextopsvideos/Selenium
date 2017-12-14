@@ -47,10 +47,11 @@ namespace PartsUnlimited.Script
         public void Verify_AddProductToCart(string browserName)
         {
             NavigateToHomePage(browserName);
-            DataTable rCnt = Excel_Library.GetNumberOfRows(@"C:\Users\Karthee\Desktop\Login_Credentials.xlsx", "Sheet1");
+            //DataTable rCnt = Excel_Library.GetNumberOfRows(@"C:\Users\Karthee\Desktop\Login_Credentials.xlsx", "Sheet1");
+          //  DataTable rCnt = Excel_Library.GetNumberOfRows(@"C:\Users\sriramdasbalaji\Source\Repos\Selenium\test\PartsUnlimited.SeleniumTests\Excel_Files\Login_Credentials.xlsx", "Sheet1");
+            string email = "Administrator@test.com";//Convert.ToString(rCnt.Rows[0]["Email"]);
+            string password = "YouShouldChangeThisPassword1!";//Convert.ToString(rCnt.Rows[0]["Password"]);
 
-            string email = Convert.ToString(rCnt.Rows[0]["Email"]);
-            string password = Convert.ToString(rCnt.Rows[0]["Password"]);
 
             //------ Login to application ---------------
 
@@ -107,10 +108,11 @@ namespace PartsUnlimited.Script
         public void Verify_RemoveProductFromCart(string browserName)
         {
             NavigateToHomePage(browserName);
-            DataTable rCnt = Excel_Library.GetNumberOfRows(@"C:\Users\Karthee\Desktop\Login_Credentials.xlsx", "Sheet1");
+         //   DataTable rCnt = Excel_Library.GetNumberOfRows(@"C:\Users\sriramdasbalaji\Source\Repos\Selenium\test\PartsUnlimited.SeleniumTests\Excel_Files\Login_Credentials.xlsx", "Sheet1");
 
-            string email = Convert.ToString(rCnt.Rows[0]["Email"]);
-            string password = Convert.ToString(rCnt.Rows[0]["Password"]);
+            string email = "Administrator@test.com";//Convert.ToString(rCnt.Rows[0]["Email"]);
+            string password = "YouShouldChangeThisPassword1!";//Convert.ToString(rCnt.Rows[0]["Password"]);
+
 
             //------ Login to application ---------------
 

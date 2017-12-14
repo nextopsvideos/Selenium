@@ -16,7 +16,7 @@ namespace PartsUnlimited
 {
     class Base_Class
     {
-        static string Base_Url = "http://partsdev1.azurewebsites.net/";
+        static string Base_Url = "http://localhost:82/";
         
         public static IEnumerable<string> BrowserToRunWith()
         {
@@ -45,8 +45,9 @@ namespace PartsUnlimited
 
             else
             {
+                
                 //Instantiating geckodriver for selenium version
-                FirefoxDriverService service = FirefoxDriverService.CreateDefaultService("C:\\Program Files\\Mozilla Firefox", "geckodriver.exe");
+                FirefoxDriverService service = FirefoxDriverService.CreateDefaultService("C:\\Program Files\\Mozilla Firefox\\", "geckodriver.exe");
                 service.FirefoxBinaryPath = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
 
                 PropertiesCollection.driver = new FirefoxDriver(service); // Initialize firefox driver
