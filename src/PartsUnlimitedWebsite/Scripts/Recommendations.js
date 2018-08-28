@@ -7,7 +7,7 @@
             $("#recommendations-panel").html(data);
         },
         error: function (error) {
-            alert("Failed to get recommendations...");
+           // alert("Failed to get recommendations...");
         },
     })
 }
