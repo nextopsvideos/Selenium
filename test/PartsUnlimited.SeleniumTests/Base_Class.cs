@@ -47,7 +47,7 @@ namespace PartsUnlimited
             {
                 
                 //Instantiating geckodriver for selenium version
-                FirefoxDriverService service = FirefoxDriverService.CreateDefaultService("C:\\Program Files\\Mozilla Firefox\\", "geckodriver.exe");
+                FirefoxDriverService service = FirefoxDriverService.CreateDefaultService();
                 service.FirefoxBinaryPath = "C:\\Program Files\\Mozilla Firefox\\firefox.exe";
 
                 PropertiesCollection.driver = new FirefoxDriver(service); // Initialize firefox driver
