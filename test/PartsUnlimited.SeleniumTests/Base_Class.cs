@@ -35,7 +35,10 @@ namespace PartsUnlimited
             
             if (browserName.Equals("Chrome"))
             {
-                PropertiesCollection.driver = new ChromeDriver();
+               
+               ChromeOptions options = new ChromeOptions();
+               options.BinaryLocation = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
+               PropertiesCollection.driver = new ChromeDriver(options);
             }
 
             //else if (browserName.Equals("IE"))
